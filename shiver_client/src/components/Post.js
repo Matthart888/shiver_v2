@@ -14,7 +14,7 @@ class BLOG_POSTS extends Component {
         .then(res => res.json())
         .then(jsonedPosts => this.setState({ blog_posts: jsonedPosts}))
         .catch (error => console.error(error))
-      }
+    }
 
     render () {
         console.log(this.state.blog_posts)
