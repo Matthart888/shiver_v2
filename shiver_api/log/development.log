@@ -1,0 +1,217 @@
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE "shiver_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "shiver_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4633544434023927240)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20200711144708)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "username" character varying, "catagory" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4633544434023927240)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4633544434023927240)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20200711144708)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "username" character varying, "catagory" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(4633544434023927240)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4633544434023927240)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20200711144708)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "username" character varying, "catagory" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4633544434023927240)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4633544434023927240)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4633544434023927240)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4633544434023927240)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBlogPosts (20200711150329)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "title" character varying, "username" character varying, "catagory" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200711150329"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4633544434023927240)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Raw denim tote bag master ugh park offal kombucha occupy crucifix."], ["username", "Hybrid the Fated"], ["catagory", "beard"], ["content", "Ut reprehenderit at. Vero consectetur aliquam. Ut omnis ipsum."], ["created_at", "2020-07-11 15:04:28.462092"], ["updated_at", "2020-07-11 15:04:28.462092"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Street etsy austin flannel pickled meditation put a bird on it."], ["username", "Zoom Boy"], ["catagory", "wayfarers"], ["content", "Aut blanditiis sit. Repellendus dolorum impedit. Consectetur aut aliquid."], ["created_at", "2020-07-11 15:04:28.471355"], ["updated_at", "2020-07-11 15:04:28.471355"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (6.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Listicle swag yr loko tote bag stumptown sartorial."], ["username", "Captain Yellowjacket"], ["catagory", "yr"], ["content", "Quia quas quo. Quod ipsam cum. Explicabo porro harum."], ["created_at", "2020-07-11 15:04:28.489926"], ["updated_at", "2020-07-11 15:04:28.489926"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (9.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (6.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Bitters etsy pickled meh kombucha irony swag."], ["username", "Maya Herrera I"], ["catagory", "skateboard"], ["content", "Omnis suscipit et. Iure nulla aut. Repellendus quidem totam."], ["created_at", "2020-07-11 15:04:28.513135"], ["updated_at", "2020-07-11 15:04:28.513135"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Microdosing knausgaard vinyl blue bottle mustache tofu everyday kombucha."], ["username", "Giant Cat"], ["catagory", "kickstarter"], ["content", "Ipsam corrupti veniam. Omnis est atque. Nisi similique sed."], ["created_at", "2020-07-11 15:04:28.542083"], ["updated_at", "2020-07-11 15:04:28.542083"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (10.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (5.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Typewriter flexitarian 90's fanny pack goth thundercats small batch church-key."], ["username", "Giant Annihilus IX"], ["catagory", "roof"], ["content", "Quia tenetur laborum. Consequuntur facere molestias. Libero dolore sint."], ["created_at", "2020-07-11 15:04:28.571769"], ["updated_at", "2020-07-11 15:04:28.571769"]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Goth master wayfarers swag vinyl ethical."], ["username", "Impulse"], ["catagory", "crucifix"], ["content", "Dolore dolor sunt. Soluta dicta corrupti. Cumque et harum."], ["created_at", "2020-07-11 15:04:28.627572"], ["updated_at", "2020-07-11 15:04:28.627572"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (2.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Readymade pitchfork kogi tote bag normcore shoreditch carry wes anderson knausgaard."], ["username", "General Corsair"], ["catagory", "blog"], ["content", "Aspernatur dolorem suscipit. Eius rerum ipsam. Atque sit quaerat."], ["created_at", "2020-07-11 15:04:28.658111"], ["updated_at", "2020-07-11 15:04:28.658111"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Letterpress bicycle rights cold-pressed selfies kale chips five dollar toast banjo."], ["username", "Goku Knight"], ["catagory", "sustainable"], ["content", "Doloribus aut dolorem. Aut rerum qui. Vitae corporis veniam."], ["created_at", "2020-07-11 15:04:28.684794"], ["updated_at", "2020-07-11 15:04:28.684794"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cray tilde wolf marfa next level heirloom."], ["username", "Red Renata Soliz"], ["catagory", "polaroid"], ["content", "Vel est qui. Quia labore tempora. Non autem animi."], ["created_at", "2020-07-11 15:04:28.695911"], ["updated_at", "2020-07-11 15:04:28.695911"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Yolo carry butcher cold-pressed mixtape plaid hella hoodie tofu."], ["username", "Bird"], ["catagory", "yr"], ["content", "Neque a et. Eius ipsam at. Nihil odio inventore."], ["created_at", "2020-07-11 15:04:28.757011"], ["updated_at", "2020-07-11 15:04:28.757011"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Brooklyn sustainable godard diy bitters."], ["username", "Supah Colin Wagner Strange"], ["catagory", "shoreditch"], ["content", "Voluptas placeat et. Non recusandae est. Minus vel non."], ["created_at", "2020-07-11 15:04:28.800587"], ["updated_at", "2020-07-11 15:04:28.800587"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (2.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Leggings skateboard vhs salvia polaroid deep v."], ["username", "Omega Red"], ["catagory", "yr"], ["content", "Dolores omnis optio. Corporis nobis voluptas. Expedita dicta similique."], ["created_at", "2020-07-11 15:04:28.814255"], ["updated_at", "2020-07-11 15:04:28.814255"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (2.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Keytar wayfarers cold-pressed small batch you probably haven't heard of them."], ["username", "Moonstone Ivy"], ["catagory", "celiac"], ["content", "Est quia occaecati. Eum placeat suscipit. Corporis in mollitia."], ["created_at", "2020-07-11 15:04:28.847117"], ["updated_at", "2020-07-11 15:04:28.847117"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Heirloom drinking diy thundercats."], ["username", "Hell"], ["catagory", "cleanse"], ["content", "Repellendus ut at. Dolore magni quaerat. Amet qui dolorum."], ["created_at", "2020-07-11 15:04:28.892637"], ["updated_at", "2020-07-11 15:04:28.892637"]]
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Trust fund williamsburg gluten-free ugh."], ["username", "Ant Girl"], ["catagory", "microdosing"], ["content", "Deleniti suscipit autem. Praesentium magni ipsam. Dolorum iure quo."], ["created_at", "2020-07-11 15:04:28.941985"], ["updated_at", "2020-07-11 15:04:28.941985"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (5.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cleanse keffiyeh pickled bitters flannel godard pitchfork."], ["username", "Mr Hulk Brain"], ["catagory", "farm-to-table"], ["content", "Sit consequatur fugiat. Optio quaerat atque. Totam nesciunt aut."], ["created_at", "2020-07-11 15:04:28.993579"], ["updated_at", "2020-07-11 15:04:28.993579"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Bicycle rights pork belly mumblecore bespoke fingerstache before they sold out tofu aesthetic."], ["username", "Doctor Metallo Wolf"], ["catagory", "beard"], ["content", "Ut at commodi. Nihil repudiandae et. Labore est pariatur."], ["created_at", "2020-07-11 15:04:29.017821"], ["updated_at", "2020-07-11 15:04:29.017821"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (9.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Normcore wolf tattooed echo mumblecore vice tote bag brunch pabst."], ["username", "General Bantam"], ["catagory", "portland"], ["content", "Ut alias est. Velit ducimus molestiae. Fugit vitae laborum."], ["created_at", "2020-07-11 15:04:29.027609"], ["updated_at", "2020-07-11 15:04:29.027609"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (17.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (4.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fashion axe everyday park crucifix master intelligentsia."], ["username", "Ultra Angel"], ["catagory", "drinking"], ["content", "Quia quasi dicta. Est repellendus modi. Non voluptas vel."], ["created_at", "2020-07-11 15:04:29.060133"], ["updated_at", "2020-07-11 15:04:29.060133"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-07-11 08:05:08 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 63.2ms | Allocations: 479)
+Completed 200 OK in 104ms (Views: 91.0ms | ActiveRecord: 0.0ms | Allocations: 2621)
+
+
+Started GET "/blog_posts" for ::1 at 2020-07-11 08:05:16 -0700
+Processing by BlogPostsController#index as HTML
+  [1m[36mBlogPost Load (24.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/controllers/blog_posts_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 5.3ms | ActiveRecord: 45.9ms | Allocations: 1825)
+
+
+Started GET "/blog_post" for ::1 at 2020-07-11 08:05:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/blog_post"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/blog_posts" for ::1 at 2020-07-11 08:06:26 -0700
+Processing by BlogPostsController#index as HTML
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/controllers/blog_posts_controller.rb:8:in `index'
+Completed 200 OK in 88ms (Views: 79.1ms | ActiveRecord: 2.2ms | Allocations: 1656)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.9ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pug ramps occupy pop-up lumbersexual pinterest."], ["username", "Dark Cogliostro"], ["catagory", "microdosing"], ["content", "Sint facilis molestiae. Magnam autem reiciendis. Exercitationem qui expedita."], ["created_at", "2020-07-11 15:08:52.916430"], ["updated_at", "2020-07-11 15:08:52.916430"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Forage yolo blog bushwick vinegar."], ["username", "Mr Scorpia Ivy"], ["catagory", "migas"], ["content", "Qui est earum. Sequi beatae fugit. Fugit tenetur sunt."], ["created_at", "2020-07-11 15:08:52.923842"], ["updated_at", "2020-07-11 15:08:52.923842"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pabst seitan paleo ethical pop-up twee yolo meh."], ["username", "Ultra Shrinking Violet"], ["catagory", "bespoke"], ["content", "Et nemo aut. Officiis cumque quaerat. Maiores dolores enim."], ["created_at", "2020-07-11 15:08:52.945978"], ["updated_at", "2020-07-11 15:08:52.945978"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (1.0ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Occupy seitan gentrify dreamcatcher tilde vice."], ["username", "Magnificent Dormammu Man"], ["catagory", "Yuccie"], ["content", "Cupiditate nihil velit. Molestias doloribus voluptas. Qui omnis nulla."], ["created_at", "2020-07-11 15:08:52.984645"], ["updated_at", "2020-07-11 15:08:52.984645"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Selfies everyday kale chips offal iphone marfa fingerstache."], ["username", "Illustrious Darkhawk Spirit"], ["catagory", "disrupt"], ["content", "Quae laboriosam et. Est nemo ipsam. Qui est qui."], ["created_at", "2020-07-11 15:08:53.031628"], ["updated_at", "2020-07-11 15:08:53.031628"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Yolo kickstarter meggings aesthetic polaroid tattooed viral."], ["username", "Ripcord"], ["catagory", "locavore"], ["content", "Explicabo eos sit. Ipsum quam maxime. Ut delectus eum."], ["created_at", "2020-07-11 15:08:53.059457"], ["updated_at", "2020-07-11 15:08:53.059457"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Literally cliche umami migas flexitarian master austin cronut slow-carb."], ["username", "Cyborg Misfit Spirit"], ["catagory", "authentic"], ["content", "Omnis modi nulla. Qui eum hic. Doloremque rem enim."], ["created_at", "2020-07-11 15:08:53.083914"], ["updated_at", "2020-07-11 15:08:53.083914"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Austin sartorial yuccie selfies."], ["username", "Agent Curse Girl"], ["catagory", "8-bit"], ["content", "Nostrum ipsa voluptas. Molestias enim quam. Saepe eius at."], ["created_at", "2020-07-11 15:08:53.125732"], ["updated_at", "2020-07-11 15:08:53.125732"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (1.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Disrupt food truck everyday swag phlogiston helvetica wayfarers portland kinfolk."], ["username", "Supah Flash"], ["catagory", "gentrify"], ["content", "Quo facilis impedit. Suscipit ratione ea. Nostrum tempora sunt."], ["created_at", "2020-07-11 15:08:53.211137"], ["updated_at", "2020-07-11 15:08:53.211137"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Migas ennui flannel gastropub actually bitters."], ["username", "Captain Goblin Queen of Hearts"], ["catagory", "carry"], ["content", "Autem sunt est. Nobis quos voluptatem. Odit ut corrupti."], ["created_at", "2020-07-11 15:08:53.247834"], ["updated_at", "2020-07-11 15:08:53.247834"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pbr&b iphone mustache letterpress cliche."], ["username", "Mogo"], ["catagory", "hoodie"], ["content", "Reiciendis quis iste. Est id corporis. Vel et occaecati."], ["created_at", "2020-07-11 15:08:53.290578"], ["updated_at", "2020-07-11 15:08:53.290578"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (6.0ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Chambray bespoke kale chips asymmetrical sartorial polaroid."], ["username", "Agent Darkstar Eyes"], ["catagory", "try-hard"], ["content", "Qui ullam eaque. Facere ut quia. Mollitia aliquam sit."], ["created_at", "2020-07-11 15:08:53.333024"], ["updated_at", "2020-07-11 15:08:53.333024"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ugh craft beer lumbersexual vhs chillwave shoreditch chartreuse phlogiston."], ["username", "Siryn Claw"], ["catagory", "dreamcatcher"], ["content", "Molestiae amet consequatur. Repellat fugiat enim. Accusantium officia minus."], ["created_at", "2020-07-11 15:08:53.371247"], ["updated_at", "2020-07-11 15:08:53.371247"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (2.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Paleo narwhal organic literally hammock freegan carry cred lomo."], ["username", "Moloch"], ["catagory", "shoreditch"], ["content", "Autem veniam sit. Qui facere repudiandae. Accusamus qui neque."], ["created_at", "2020-07-11 15:08:53.410455"], ["updated_at", "2020-07-11 15:08:53.410455"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (4.9ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Kogi thundercats cornhole yr farm-to-table literally fingerstache."], ["username", "Mr Snowbird"], ["catagory", "schlitz"], ["content", "Voluptatem nulla omnis. Vel velit inventore. Qui deleniti sint."], ["created_at", "2020-07-11 15:08:53.451724"], ["updated_at", "2020-07-11 15:08:53.451724"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (2.1ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Vice tousled seitan cray jean shorts."], ["username", "Giant Onslaught"], ["catagory", "literally"], ["content", "Perferendis totam nisi. Est voluptatem nulla. Odit aliquam molestias."], ["created_at", "2020-07-11 15:08:53.480056"], ["updated_at", "2020-07-11 15:08:53.480056"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.7ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Literally beard loko fixie sriracha."], ["username", "Red Morph"], ["catagory", "intelligentsia"], ["content", "Excepturi praesentium quia. Ex voluptas earum. Consectetur nulla odio."], ["created_at", "2020-07-11 15:08:53.512758"], ["updated_at", "2020-07-11 15:08:53.512758"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (2.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Lumbersexual williamsburg wayfarers actually."], ["username", "Ultra Junkpile"], ["catagory", "hammock"], ["content", "Aut quo et. Reprehenderit suscipit placeat. Quae quia accusamus."], ["created_at", "2020-07-11 15:08:53.533827"], ["updated_at", "2020-07-11 15:08:53.533827"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (3.8ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Tousled swag sustainable pour-over five dollar toast phlogiston fanny pack."], ["username", "Agent Bird"], ["catagory", "waistcoat"], ["content", "Incidunt expedita optio. Ut quod earum. Numquam similique nam."], ["created_at", "2020-07-11 15:08:53.652069"], ["updated_at", "2020-07-11 15:08:53.652069"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlogPost Create (0.7ms)[0m  [1m[32mINSERT INTO "blog_posts" ("title", "username", "catagory", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Selvage seitan kale chips truffaut meh letterpress freegan leggings."], ["username", "Bumblebee Strange"], ["catagory", "vice"], ["content", "Fuga enim eligendi. Quasi quae non. Ab nulla autem."], ["created_at", "2020-07-11 15:08:53.717793"], ["updated_at", "2020-07-11 15:08:53.717793"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/blog_posts" for ::1 at 2020-07-11 08:09:12 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BlogPostsController#index as HTML
+  [1m[36mBlogPost Load (1.0ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/controllers/blog_posts_controller.rb:8:in `index'
+Completed 200 OK in 126ms (Views: 79.4ms | ActiveRecord: 21.1ms | Allocations: 9290)
+
+
